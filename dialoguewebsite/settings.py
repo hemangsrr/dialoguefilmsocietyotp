@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import environ
 
+ROOT_DIR = environ.Path(__file__) - 3
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASEAPP_DIR = ROOT_DIR.path('base')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -24,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2t(8d%u=s7so_sen=t(!7sis!bt1a(s4mcc&_bivclou8^z)ka'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com','dialoguefilmsocityotp.com']
 
@@ -61,7 +63,7 @@ ROOT_URLCONF = 'dialoguewebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASEAPP_DIR.path('templates')),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

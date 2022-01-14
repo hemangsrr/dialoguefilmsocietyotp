@@ -1,38 +1,6 @@
-<!-- {% load static %} -->
-<!DOCTYPE html>
-<html lang="en">
-<title> DIFF </title>
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="author" content="Hemang Mohan">
-
-      <!-- bootstrapcdn -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-      <!-- external stylesheet -->
-      <!-- <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'invento19/css/main.css' %}"> -->
-
-      <!-- icon pack -->
-      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-      <!-- google font -->
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet">
-      <!-- jquery cdn -->
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
-      <!-- tweenmax (greensock) cdn -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
-      <!-- for on scroll animations -->
-      <!-- <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
-      <script src="{% static 'invento19/js/wow.min.js' %}"></script> -->
-</head>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 <!-- COLLECTION STARTS -->
             <div class="collection">
               <p id="heading">Assosciated Events</p>
@@ -44,4 +12,5 @@
                 {% endfor %}
               </div>
             </div>
-</html>
+
+{% endblock %}
