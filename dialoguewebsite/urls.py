@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.urls')),
     path('preevent/', include('preevents.urls')),
-    # path('regionalscreening/', include('regionalscreening.urls')),
-    # path('diff6/', include('diff6.urls')),
+    path('regionalscreening/', include('regionalscreening.urls')),
+    path('diff6/', include('diff6.urls')),
 ]
