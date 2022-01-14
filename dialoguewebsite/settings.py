@@ -25,7 +25,7 @@ SECRET_KEY = '2t(8d%u=s7so_sen=t(!7sis!bt1a(s4mcc&_bivclou8^z)ka'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','dialogueotp.herokuapp.com']
 
 
 # Application definition
