@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'preevents.apps.PreeventsConfig',
+    'regionalscreening.apps.RegionalscreeningConfig',
+    'diff6.apps.Diff6Config',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
