@@ -19,16 +19,31 @@ ROOT_DIR = environ.Path(__file__) - 3
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASEAPP_DIR = ROOT_DIR.path('base')
 
+# Load operating system environment variables and then prepare to use them
+env = environ.Env()
+
+# .env file, should load only in development environment
+READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=True)
+
+if READ_DOT_ENV_FILE:
+    # Operating System Environment variables have precedence over variables defined in the .env file,
+    # that is to say variables from the .env files will only be used if not defined
+    # as environment variables.
+    env_file = str(ROOT_DIR.path('.env'))
+    print('Loading : {}'.format(env_file))
+    env.read_env(env_file)
+    print('The .env file has been loaded. See base.py for more information')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2t(8d%u=s7so_sen=t(!7sis!bt1a(s4mcc&_bivclou8^z)ka'
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DJANGO_DEBUG', False)
 
-ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com','dialoguefilmsocityotp.com']
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['.herokuapp.com'])
 
 
 # Application definition
@@ -81,20 +96,21 @@ WSGI_APPLICATION = 'dialoguewebsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'diffdb',
+#         'USER': 'diff',
+#         'PASSWORD': 'dialogue',
+#         'HOST': 'localhost',
+#         'POST':'',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'diffdb',
-        'USER': 'diff',
-        'PASSWORD': 'dialogue',
-        'HOST': 'localhost',
-        'POST':'',
-    }
+    'default': env.db('DATABASE_URL', default='postgres://diff:dialogue@127.0.0.1/diffdb'),
 }
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES['default']['ATOMIC_REQUESTS'] = True
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
