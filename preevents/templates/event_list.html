@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- COLLECTION STARTS -->
+            <div class="collection">
+              <p id="heading">Assosciated Events</p>
+              <div>
+                {% for item in events %}
+                <img style="width:600px; height:400px; border-radius:10px;" src="{{item.posterurl}}" alt="">
+                <h3 style="color: #fff;">{{ item.title }}</h3>
+                <p style="color: #fff;">{{ item.description }}</p>
+                {% endfor %}
+              </div>
+            </div>
+
+{% endblock %}

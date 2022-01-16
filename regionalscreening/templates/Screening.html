@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- COLLECTION STARTS -->
+            <div class="collection">
+              <p id="heading">Assosciated Events</p>
+              <div>
+                {% for item in screens %}
+                <h3 style="color: #fff;">{{ item.place }}</h3>
+                <p style="color: #fff;">{{ item.screeningDateTime }}</p>
+                {% endfor %}
+              </div>
+            </div>
+{% endblock %}
