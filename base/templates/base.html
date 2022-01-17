@@ -34,16 +34,9 @@
   <header>
       <div class="shop-container">
             <!-- NAVIGATION STARTS -->
-
             <div class="nav">
                   <div class="menu-open">
                         <ion-icon name="menu"></ion-icon>
-                  </div>
-                  <div class="brand">
-                    <span><a href="{% url 'home' %}"><b>Dialogue OTP</b></a></span>
-                  </div>
-                  <div class="logo">
-                    <!-- <a href="{% url 'home' %}"><img src="{% static 'invento19/images/logo.png' %}" alt=""></a> -->
                   </div>
                   <div class="menu">
                         <div class="menu-close">
@@ -62,14 +55,21 @@
                               </li>
                               <li><a href="{% url 'preevent' %}">Assosciated Events</a></li>
                               <li><a href="{% url 'regionalscreening' %}">Regional Screening</a></li>
-                              <li><a href=#>Team DIFF6</a></li>
+                              <li><a href=#>Sub Commitees</a></li>
                               <li><a href="{% url 'diff6' %}">About Us</a></li>
+                              <li><a href="{% url 'diff6' %}">Contact Us</a></li>
                         </ul>
                   </div>
             </div>
       </div>
     </header>
-
+    <div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)" class="jumbotron bg-cover text-white">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 font-weight-bold" style="color:#fff">6th Dialogue International Film Festival</h1>
+            <p class="display-4 font-italic mb-0">Feb 26,27,28, Mar 1</p>
+            <p class="display-4 font-italic">Lakshmi Picture Palace, Ottapalam</p>
+        </div>
+    </div>
       {% block content %}
       {% endblock %}
       <!-- FOOTER STARTS -->
@@ -78,45 +78,20 @@
         <div class="container-fluid footer">
               <div class="section container">
                 <div class="inner">
-                  <div class="flex flex-3">
-                    <div class="col">
-                      <h3>Address</h3>
-                      <ul class="alt">
-                        <li>Dialogue Film Society</li>
-                        <li>Ottapalam</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
-                    </div>
-                    <div class="col">
-                      <h3>Contact Us</h3>
-                      <ul class="alt">
-                        <li><b>Post</b></li>
-                        <li>Name - <a href="#">0000000000</a></li>
-                        <li><b>Post</b></li>
-                        <li>Name - <a href="#">1111111111</a></li>
-                        <li><b>Post</b></li>
-                        <li>Name - <a href="#">2222222222</a></li>
-                      </ul>
-                    </div>
-                    <div class="col">
-                      <h3>Made with <i class="icon fa-heart" style="color:red"></i>	 at Dialogue Film Socity Ottapalam</h3>
+                    <div class="center">
+                      <h3>Made with <i class="icon fa-heart" style="color:red"></i>	 at Dialogue Film Society Ottapalam</h3>
                       <ul class="alt">
                         <!-- <li style="text-align:center">Found a bug or mistake? Whatsapp: <a href="https://api.whatsapp.com/send?phone=919447806863"><b>+919447806863</a></li> -->
-                        <li style="text-align:center">© <a href="/"><b>DialogueOTP</b></a></li>
+                        <li style="text-align:center">© <a href="/"><b>DialogueFilmSociety</b></a></li>
                       </ul>
                     </div>
-                  </div>
                 </div>
                 <div class="copyright">
-                  <!-- <ul class="icons">
+                  <ul class="icons">
                     <li><a href="https://twitter.com/inventogec" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                     <li><a href="https://facebook.com/inventogec" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                     <li><a href="https://www.instagram.com/inventogec/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                  </ul> -->
+                  </ul>
                 </div>
               </div>
       </footer>
@@ -156,6 +131,17 @@ $(document).on("click", ".menu-open", function() {
 });
 $(document).on("click", ".menu-close", function() {
       t1.reversed(!t1.reversed());
+});
+</script>
+<script>
+$(function () {
+  $(window).on('scroll', function () {
+      if ( $(window).scrollTop() > 10 ) {
+          $('.nav').addClass('scrolled');
+      } else {
+          $('.nav').removeClass('scrolled');
+      }
+  });
 });
 </script>
 </body>
