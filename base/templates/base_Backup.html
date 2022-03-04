@@ -30,6 +30,46 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 <body>
+  <div class="container-fluid">
+  <header>
+      <div class="shop-container">
+            <!-- NAVIGATION STARTS -->
+            <div class="nav">
+                  <div class="menu-open">
+                        <ion-icon name="menu"></ion-icon>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-close">
+                              <ion-icon name="close"></ion-icon>
+                        </div>
+                        <ul>
+                              <li><a href="{% url 'home' %}">Home</a></li>
+                              <li><a class="dropdown-toggle" href="#">History</a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href=#>2016</a>
+                                  <a class="dropdown-item" href=#>2017</a>
+                                  <a class="dropdown-item" href=#>2018</a>
+                                  <a class="dropdown-item" href=#>2019</a>
+                                  <a class="dropdown-item" href=#>2020</a>
+                                </div>
+                              </li>
+                              <li><a href="{% url 'preevent' %}">Assosciated Events</a></li>
+                              <li><a href="{% url 'regionalscreening' %}">Regional Screening</a></li>
+                              <li><a href=#>Sub Commitees</a></li>
+                              <li><a href="{% url 'diff6' %}">About Us</a></li>
+                              <li><a href="{% url 'diff6' %}">Contact Us</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </div>
+    </header>
+    <div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)" class="jumbotron bg-cover text-white">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 font-weight-bold" style="color:#fff">6th Dialogue International Film Festival</h1>
+            <p class="display-4 font-italic mb-0">Feb 26,27,28, Mar 1</p>
+            <p class="display-4 font-italic">Lakshmi Picture Palace, Ottapalam</p>
+        </div>
+    </div>
       {% block content %}
       {% endblock %}
       <!-- FOOTER STARTS -->
