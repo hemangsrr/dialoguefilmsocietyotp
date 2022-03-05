@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'regionalscreening.apps.RegionalscreeningConfig',
     'diff6.apps.Diff6Config',
     'base.apps.BaseConfig',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -94,7 +95,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dialoguewebsite.wsgi.application'
 
+STATICFILES_FINDERS = [
+    'compressor.finders.CompressorFinder',
+]
 
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 #

@@ -16,6 +16,11 @@
       <!-- external stylesheet -->
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="stylesheet" href="{% static 'css/main.css' %}">
+      {% load compress %}
+
+      {% compress css %}
+      <link type="text/x-scss" href="{% static 'css/timer.scss' %}" rel="stylesheet" media="screen">
+      {% endcompress %}
 
       <!-- icon pack -->
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
+/* line 14, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+html {
+  display: grid;
+  min-height: 100%; }
+
+/* line 19, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+body {
+  display: grid;
+  background: #183059; }
+
+/* line 24, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 650px;
+  height: 480px; }
+
+/* line 32, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+h1 {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #F6F4F3; }
+
+/* line 42, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+#timer {
+  color: #F6F4F3;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: .7em;
+  letter-spacing: 5px;
+  margin-top: 25%; }
+
+/* line 52, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px; }
+
+/* line 59, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.days {
+  background: #EF2F3C; }
+
+/* line 63, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.hours {
+  background: #F6F4F3;
+  color: #183059; }
+
+/* line 68, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.minutes {
+  background: #276FBF; }
+
+/* line 72, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.seconds {
+  background: #F0A202; }
+
+/* line 79, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.numbers {
+  font-family: "Montserrat", sans-serif;
+  color: #183059;
+  font-size: 4em; }
+
+/* line 85, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.white {
+  position: absolute;
+  background: #F6F4F3;
+  height: 85px;
+  width: 75px;
+  left: 30%;
+  top: 2%; }
+  /* line 92, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .white .triangle {
+    border-bottom: 14px solid #F6F4F3; }
+  /* line 95, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .white .string {
+    background: #F6F4F3;
+    border: 1px solid #F6F4F3; }
+
+/* line 101, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.red {
+  position: absolute;
+  background: #EF2F3C;
+  left: 18%;
+  top: 9%;
+  height: 65px;
+  width: 70px; }
+  /* line 108, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .red .triangle {
+    border-bottom: 14px solid #EF2F3C; }
+  /* line 111, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .red .string {
+    background: #EF2F3C;
+    border: 1px solid #EF2F3C; }
+
+/* line 117, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.blue {
+  position: absolute;
+  background: #276FBF;
+  height: 80px;
+  width: 80px;
+  left: 60%;
+  top: 5%; }
+  /* line 124, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .blue .triangle {
+    border-bottom: 14px solid #276FBF; }
+  /* line 127, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .blue .string {
+    background: #276FBF;
+    border: 1px solid #276FBF; }
+
+/* line 133, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.balloon {
+  border: 1px solid #000;
+  border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
+  z-index: 2; }
+
+/* line 139, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.eye {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 40%;
+  left: 22%;
+  background: #000;
+  border-radius: 50%; }
+  /* line 147, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+  .eye:after {
+    content: '';
+    left: 35px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute; }
+
+/* line 158, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.mouth {
+  position: absolute;
+  top: 45%;
+  left: 43%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%; }
+
+/* line 167, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.happy {
+  border: 2px solid;
+  border-color: transparent #000 #000 transparent;
+  transform: rotate(45deg); }
+
+/* line 173, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.triangle {
+  position: absolute;
+  left: 40%;
+  bottom: -10%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent; }
+
+/* line 183, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.string {
+  position: absolute;
+  height: 70px;
+  width: 1px;
+  left: 48%;
+  top: 100%;
+  z-index: -1; }
+
+/* line 192, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.star {
+  width: 20px;
+  height: 20px;
+  background: #F6F4F3;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+/* line 200, d:/programming/git/hemang srr/dialoguefilmsocietyotp/static/css/timer.scss */
+.star-red {
+  width: 30px;
+  height: 30px;
+  margin-left: 51px;
+  margin-top: -5px;
+  background: #EF2F3C;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
